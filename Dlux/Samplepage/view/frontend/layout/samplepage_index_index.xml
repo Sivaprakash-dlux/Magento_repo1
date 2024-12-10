@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+    <body>
+        
+        <referenceContainer name="content">
+           
+                <block class="Dlux\Samplepage\Block\Display" name="samplepage.display" template="Dlux_Samplepage::display.phtml"/>
+                
+            <block class="Magento\CatalogWidget\Block\Product\ProductsList" name="featured.products" template="Magento_CatalogWidget::product/widget/content/grid.phtml">
+                <arguments>
+                    <argument name="products_count" xsi:type="string">9</argument>
+                    <argument name="products_per_page" xsi:type="string">8</argument>
+                    <argument name="conditions_encoded" xsi:type="string">^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`sku`,`operator`:`()`,`value`:`WS12, WT09, MT07, MH07, 24-MB02, 24-WB04, 241-MB08, 240-LV05, SWL -001,Silver-Rings100`^]^]</argument>
+                </arguments>
+            </block>
+
+
+
+
+        </referenceContainer>
+        
+       
+        <referenceContainer name="sidebar.main" remove="true"/>
+    </body>
+</page>
+
